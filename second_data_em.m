@@ -8,9 +8,9 @@ dx = 0.1;           % Resolution
 [X, Y] = meshgrid(0:dx:width_total, 0:dx:depth_total);
 Energy = zeros(size(X));
 
-%% 2. Data from Table 2 
+%% 2. Data from Table 2
 % Column 1: Width(x), Column 2: Depth(y), Column 3: Diameter(d), Column 4: Quality Factor
-% Quality Factor (0.1 to 1.0) ব্যবহার করা হয়েছে ৩ ও ১১ নং হোলের দুর্বলতা দেখাতে 
+% Quality Factor (0.1 to 1.0) is used to show the weakness of holes 3 and 11
 hole_data = [
     10, 15.0, 0.7, 0.4;   % Defect 1
     13, 13.0, 0.7, 0.5;   % Defect 2
@@ -73,4 +73,5 @@ title('Echodynamic Curve (Realistic Version)');
 xlabel('width (mm)');
 ylabel('Normalized Energy');
 grid on;
+
 axis([0 90 0 1.1]);
